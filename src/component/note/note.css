@@ -1,0 +1,169 @@
+@charset "UTF-8";
+.note-container {
+  padding: 1.5em;
+  -webkit-box-shadow: 0 3px 6px 0 #00000029;
+          box-shadow: 0 3px 6px 0 #00000029;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .note-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 1.2em 0;
+  }
+}
+
+.checkActive:not(.checkbox) {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #fff;
+          text-decoration-color: #fff;
+  background: var(--color-282e2999);
+}
+
+.checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid var(--color-ffffff);
+  font: inherit;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 0.15em;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  color: var(--color-ffffff);
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.checkbox::before {
+  content: "✔";
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.checkbox:checked::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.top-note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1em;
+}
+
+.top-note .left,
+.top-note .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-note .caption-note {
+  color: var(--color-ffffff);
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-left: 0.5em;
+  letter-spacing: 1px;
+}
+
+.top-note .caption-note::first-letter {
+  text-transform: uppercase;
+}
+
+.top-note .right {
+  color: var(--color-ffffff99);
+  font-size: 1.3em;
+  position: relative;
+}
+
+.top-note .right .edit,
+.top-note .right .trash {
+  cursor: pointer;
+}
+
+.textarea-note {
+  color: #fff;
+  opacity: 0.8;
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  text-align: justify;
+  word-spacing: 0;
+}
+
+.date-note {
+  color: var(--color-ffffff);
+  opacity: 0.8;
+}
+
+.box-del-note {
+  width: 260px;
+  height: 100px;
+  background: var(--color-ffffff);
+  color: var(--color-00000099);
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  bottom: 2.4rem;
+  font-size: 0.9em;
+  -webkit-box-shadow: 0 3px 6px #00000029;
+          box-shadow: 0 3px 6px #00000029;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.box-del-note::first-letter {
+  text-transform: uppercase;
+}
+
+.box-del-note .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1em;
+  width: 100%;
+}
+
+.box-del-note .btns button {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  color: var(--color-03a9f4);
+  font-weight: bold;
+  cursor: pointer;
+}
+/*# sourceMappingURL=note.css.map */

@@ -1,0 +1,62 @@
+.header {
+  padding: 3rem 0 2rem;
+}
+
+.search-note {
+  position: relative;
+}
+
+.search-note .input-search-note {
+  border: none;
+  -webkit-box-shadow: 0 3px 6px 0 #00000029;
+          box-shadow: 0 3px 6px 0 #00000029;
+  padding: 1em;
+  padding-left: 2.5em;
+  width: 100%;
+}
+
+.search-note .input-search-note::-webkit-input-placeholder {
+  font-size: 15px;
+  font-family: "roboto";
+  opacity: 60%;
+}
+
+.search-note .input-search-note:-ms-input-placeholder {
+  font-size: 15px;
+  font-family: "roboto";
+  opacity: 60%;
+}
+
+.search-note .input-search-note::-ms-input-placeholder {
+  font-size: 15px;
+  font-family: "roboto";
+  opacity: 60%;
+}
+
+.search-note .input-search-note::placeholder {
+  font-size: 15px;
+  font-family: "roboto";
+  opacity: 60%;
+}
+
+.search-note .btn-search-note {
+  background: transparent;
+  border: none;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.1em;
+  color: var(--color-00000099);
+}
+/*# sourceMappingURL=header.css.map */

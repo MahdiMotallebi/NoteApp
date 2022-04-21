@@ -1,0 +1,121 @@
+@import "../../style/media_Query.scss";
+
+.note-container {
+  padding: 1.5em;
+  box-shadow: 0 3px 6px 0 #00000029;
+  border-radius: 4px;
+  @include tablet() {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2em 0;
+  }
+}
+
+.checkActive:not(.checkbox) {
+  text-decoration: line-through;
+  text-decoration-color: #fff;
+  background: var(--color-282e2999);
+}
+.checkbox {
+  appearance: none;
+  border: 2px solid var(--color-ffffff);
+  font: inherit;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 0.15em;
+  position: relative;
+  display: grid;
+  place-content: center;
+  color: var(--color-ffffff);
+  cursor: pointer;
+  opacity: 60%;
+  &::before {
+    content: "✔";
+    transform: scale(0);
+  }
+  &:checked::before {
+    transform: scale(1);
+  }
+}
+.top-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  .left,
+  .right {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+
+  .caption-note {
+    color: var(--color-ffffff);
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-left: 0.5em;
+    letter-spacing: 1px;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  .right {
+    color: var(--color-ffffff99);
+    font-size: 1.3em;
+    position: relative;
+
+    .edit,
+    .trash {
+      cursor: pointer;
+    }
+  }
+}
+
+.textarea-note {
+  color: #fff;
+  opacity: 0.8;
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  text-align: justify;
+  word-spacing: 0;
+}
+
+.date-note {
+  color: var(--color-ffffff);
+  opacity: 0.8;
+}
+.box-del-note {
+  width: 260px;
+  height: 100px;
+  background: var(--color-ffffff);
+  color: var(--color-00000099);
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  bottom: 2.4rem;
+  font-size: 0.9em;
+  box-shadow: 0 3px 6px #00000029;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    width: 100%;
+
+    button {
+      text-transform: uppercase;
+      font-size: 0.7em;
+      color: var(--color-03a9f4);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

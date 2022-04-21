@@ -1,0 +1,192 @@
+.progress-note {
+  margin-bottom: 1.3em;
+}
+
+.progress-note p {
+  font-weight: 500;
+  color: var(--color-00000099);
+  font-size: 1.2em;
+}
+
+.progress-note p::first-letter {
+  text-transform: uppercase;
+}
+
+.progress-note .progress-bar {
+  height: 5px;
+  width: 100%;
+  background-color: #c0e5f0;
+  margin-top: 0.6em;
+  position: relative;
+}
+
+.progress-note .progress-bar .fill-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #0000ff;
+  width: var(--width-ProgressBar);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  height: 100%;
+}
+
+.notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.3em;
+}
+
+@media (min-width: 768px) {
+  .notes {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (0.5fr)[2];
+        grid-template-columns: repeat(2, 0.5fr);
+  }
+}
+
+.not-notes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+  padding: 1em;
+}
+
+.not-notes .title-not-notes {
+  color: var(--color-00000099);
+  opacity: 60%;
+  font-weight: 500;
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+.not-notes .title-not-notes::first-letter {
+  text-transform: uppercase;
+}
+
+.img-note {
+  width: 250px;
+  height: 250px;
+}
+
+.header-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 4rem;
+  gap: 2em 1em;
+}
+
+.add-note {
+  background: var(--color-03a9f4);
+  border: none;
+  width: 8rem;
+  padding: 0.7em 0.5em;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 2px 0 #00000029;
+          box-shadow: 0 2px 2px 0 #00000029;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.7em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1.25px;
+  cursor: pointer;
+}
+
+.icon-plus {
+  font-size: 1.3em;
+}
+
+.category {
+  --width: 5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(var(--width), 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(var(--width), 1fr));
+  gap: 0.5em 0;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+.category .categories {
+  cursor: pointer;
+  position: relative;
+  padding: 0.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-00000099);
+  opacity: 80%;
+}
+
+.category .categories::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  left: 50%;
+  top: 1.8rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.category .active {
+  color: #fff;
+  border-radius: 5px;
+}
+
+.category .home::before {
+  background: var(--color-ff9100);
+}
+
+.category .work::before {
+  background: var(--color-5c6bc0);
+}
+
+.category .personal::before {
+  background: var(--color-66bb6a);
+}
+
+.category .all::before {
+  background: var(--color-69bcff);
+}
+/*# sourceMappingURL=showNotes.css.map */
