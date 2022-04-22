@@ -3,4 +3,5 @@
 # NoteApp project with React js & Redux Toolkit
 
 ♦ More info & UI/UX files: https://bigsondev.com/projects/notes-app-project/
+
 ♦ Online demo: https://motallebi-noteapp.netlify.app/
