@@ -5,7 +5,7 @@ const initialState = {
   filteredNotes: [],
   cat: [
     { value: "all", label: "all" },
-    { value: "main", label: "main" },
+    { value: "home", label: "home" },
     { value: "work", label: "work" },
     { value: "personal", label: "personal" },
   ],
